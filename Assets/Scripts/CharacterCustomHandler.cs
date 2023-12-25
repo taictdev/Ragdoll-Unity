@@ -14,6 +14,15 @@ public class CharacterCustomHandler : MonoBehaviour
         ShowRandomHead();
     }
 
+    private async void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            await SetupHead();
+            ShowRandomHead();
+        }
+    }
+
     private async UniTask SetupHead()
     {
         // Hide all heads asynchronously
